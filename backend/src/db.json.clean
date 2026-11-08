@@ -1,0 +1,1049 @@
+{
+  "users": {
+    "id_1": {
+      "id": "id_1",
+      "name": "Juan Pérez",
+      "email": "juan@test.com",
+      "password": "*****LIMPIADO*****",
+      "role": "VENDOR",
+      "createdAt": "2026-10-05T20:33:17.638Z",
+      "active": true
+    },
+    "id_2": {
+      "id": "id_2",
+      "name": "Test User",
+      "email": "test@test.com",
+      "password": "*****LIMPIADO*****",
+      "role": "VENDOR",
+      "createdAt": "2026-10-05T20:34:16.731Z",
+      "active": true
+    },
+    "id_3": {
+      "id": "id_3",
+      "name": "María",
+      "email": "maria@test.com",
+      "password": "*****LIMPIADO*****",
+      "role": "VENDOR",
+      "createdAt": "2026-10-05T20:35:02.833Z",
+      "active": true
+    },
+    "id_4": {
+      "id": "id_4",
+      "name": "Pedro Agostini",
+      "email": "pedroagostini@gmail.com",
+      "password": "*****LIMPIADO*****",
+      "role": "ADMIN",
+      "createdAt": "2026-10-05T20:43:40.275Z",
+      "active": true
+    },
+    "id_5": {
+      "id": "id_5",
+      "name": "Test Vendedor",
+      "email": "vendedor31123@test.com",
+      "password": "*****LIMPIADO*****",
+      "role": "VENDOR",
+      "createdAt": "2026-10-05T20:45:41.944Z",
+      "active": true
+    },
+    "id_45": {
+      "id": "id_45",
+      "name": "Prueba Seg",
+      "email": "seg28905@test.com",
+      "password": "*****LIMPIADO*****",
+      "role": "VENDOR",
+      "active": true,
+      "createdAt": "2026-10-05T21:22:48.170Z"
+    }
+  },
+  "companies": {
+    "id_10": {
+      "id": "id_10",
+      "name": "Acme Retail S.L.",
+      "industry": "Retail",
+      "email": "contacto@acmeretail.es",
+      "phone": "+34 910 223 344",
+      "address": "Calle Gran Vía 28, Madrid",
+      "description": "Cadena de tiendas con 14 puntos de venta. Decisión de compra en dirección comercial.",
+      "status": "ACTIVE",
+      "createdAt": "2026-08-20T21:08:13.542Z"
+    },
+    "id_11": {
+      "id": "id_11",
+      "name": "Nortech Solutions",
+      "industry": "Tecnología",
+      "email": "hola@nortech.io",
+      "phone": "+34 933 118 902",
+      "address": "Av. Diagonal 402, Barcelona",
+      "description": "Software house especializada en ERP. Potencial para 40 licencias.",
+      "status": "ACTIVE",
+      "createdAt": "2026-08-28T21:08:13.543Z"
+    },
+    "id_12": {
+      "id": "id_12",
+      "name": "Clínica Sanitas Valladolid",
+      "industry": "Salud",
+      "email": "admin@sanitas-vall.es",
+      "phone": "+34 983 445 120",
+      "address": "Calle Sagasta 19, Valladolid",
+      "description": "Grupo de 3 clínicas. Necesitan facturación electrónica integrada.",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-04T21:08:13.543Z"
+    },
+    "id_13": {
+      "id": "id_13",
+      "name": "Grupo Alimentario DelSur",
+      "industry": "Alimentación",
+      "email": "compras@delsur.com",
+      "phone": "+34 954 220 771",
+      "address": "Polígono Cartuja, Sevilla",
+      "description": "Distribuidor regional. Renovación anual en marzo.",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-10T21:08:13.543Z"
+    },
+    "id_14": {
+      "id": "id_14",
+      "name": "Estudio Vega & Asociados",
+      "industry": "Servicios",
+      "email": "info@vegaasociados.es",
+      "phone": "+34 963 559 018",
+      "address": "Calle Colón 44, Valencia",
+      "description": "Bufete de 12 personas. Buscaban alternativa al software actual.",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-16T21:08:13.543Z"
+    },
+    "id_15": {
+      "id": "id_15",
+      "name": "Logística Mena",
+      "industry": "Transporte",
+      "email": "operaciones@menalog.es",
+      "phone": "+34 944 102 335",
+      "address": "Zona industrial Galindo, Bilbao",
+      "description": "Flota de 30 camiones. Cuenta en fase de descubrimiento.",
+      "status": "ACTIVE",
+      "createdAt": "2026-09-23T21:08:13.543Z"
+    },
+    "id_16": {
+      "id": "id_16",
+      "name": "Bistró Manzana",
+      "industry": "Hostelería",
+      "email": "reservas@bistromanzana.com",
+      "phone": "+34 945 887 610",
+      "address": "Calle Estación 7, Logroño",
+      "description": "Restaurante con dos locales. Cliente pequeño con recurrencia.",
+      "status": "INACTIVE",
+      "createdAt": "2026-08-06T21:08:13.543Z"
+    }
+  },
+  "deals": {
+    "id_17": {
+      "id": "id_17",
+      "name": "Licencias CRM — 40 usuarios",
+      "description": "Renovación de 40 licencias con soporte premium.",
+      "value": 18400,
+      "currency": "USD",
+      "stage": "NEGOTIATION",
+      "probability": 70,
+      "status": "ACTIVE",
+      "closeDate": "2026-10-14T21:08:13.543Z",
+      "companyId": "id_11",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_1"
+    },
+    "id_18": {
+      "id": "id_18",
+      "name": "Implantación ERP retail",
+      "description": "Propuesta para 14 tiendas + almacén central.",
+      "value": 32000,
+      "currency": "USD",
+      "stage": "PROPOSAL",
+      "probability": 50,
+      "status": "ACTIVE",
+      "closeDate": "2026-10-26T21:08:13.543Z",
+      "companyId": "id_10",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_2"
+    },
+    "id_19": {
+      "id": "id_19",
+      "name": "Facturación electrónica",
+      "description": "Integración con sistema de historia clínica.",
+      "value": 9600,
+      "currency": "USD",
+      "stage": "QUALIFIED",
+      "probability": 30,
+      "status": "ACTIVE",
+      "closeDate": "2026-11-08T21:08:13.543Z",
+      "companyId": "id_12",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_3"
+    },
+    "id_20": {
+      "id": "id_20",
+      "name": "Renovación anual 2026",
+      "description": "Renovación cerrada, firma pendiente de contador.",
+      "value": 24000,
+      "currency": "USD",
+      "stage": "WINNING",
+      "probability": 90,
+      "status": "WON",
+      "closeDate": "2026-10-02T21:08:13.543Z",
+      "companyId": "id_13",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_4"
+    },
+    "id_21": {
+      "id": "id_21",
+      "name": "Sustitución de software",
+      "description": "Migración desde la competencia, 12 usuarios.",
+      "value": 7200,
+      "currency": "USD",
+      "stage": "PROPOSAL",
+      "probability": 50,
+      "status": "ACTIVE",
+      "closeDate": "2026-10-20T21:08:13.543Z",
+      "companyId": "id_14",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_5"
+    },
+    "id_22": {
+      "id": "id_22",
+      "name": "Piloto gestión de flota",
+      "description": "Piloto de 3 meses con 5 vehículos.",
+      "value": 5400,
+      "currency": "USD",
+      "stage": "PROSPECTING",
+      "probability": 10,
+      "status": "ACTIVE",
+      "closeDate": "2026-11-19T21:08:13.543Z",
+      "companyId": "id_15",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_45"
+    },
+    "id_23": {
+      "id": "id_23",
+      "name": "Módulo compras",
+      "description": "Ampliación sobre la implantación principal.",
+      "value": 11800,
+      "currency": "USD",
+      "stage": "QUALIFIED",
+      "probability": 30,
+      "status": "ACTIVE",
+      "closeDate": "2026-11-02T21:08:13.543Z",
+      "companyId": "id_10",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_1"
+    },
+    "id_24": {
+      "id": "id_24",
+      "name": "Soporte y mantenimiento",
+      "description": "Contrato anual de soporte.",
+      "value": 4800,
+      "currency": "USD",
+      "stage": "PROSPECTING",
+      "probability": 10,
+      "status": "ACTIVE",
+      "closeDate": "2026-12-04T21:08:13.543Z",
+      "companyId": "id_11",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_2"
+    },
+    "id_25": {
+      "id": "id_25",
+      "name": "Portal de clientes",
+      "description": "Perdido: presupuesto congelado hasta 2027.",
+      "value": 15200,
+      "currency": "USD",
+      "stage": "LOST",
+      "probability": 0,
+      "status": "LOST",
+      "closeDate": "2026-10-05T21:08:13.543Z",
+      "companyId": "id_12",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_3"
+    },
+    "id_26": {
+      "id": "id_26",
+      "name": "Formación de equipo",
+      "description": "2 sesiones de formación pagadas.",
+      "value": 2400,
+      "currency": "USD",
+      "stage": "WINNING",
+      "probability": 90,
+      "status": "WON",
+      "closeDate": "2026-09-28T21:08:13.543Z",
+      "companyId": "id_14",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_4"
+    },
+    "id_27": {
+      "id": "id_27",
+      "name": "App de reservas",
+      "description": "Perdido: cerraron el segundo local.",
+      "value": 3200,
+      "currency": "USD",
+      "stage": "LOST",
+      "probability": 0,
+      "status": "LOST",
+      "closeDate": "2026-10-05T21:08:13.543Z",
+      "companyId": "id_16",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_5"
+    },
+    "id_28": {
+      "id": "id_28",
+      "name": "Integración tienda online",
+      "description": "Conectar stock con la web B2B.",
+      "value": 13500,
+      "currency": "USD",
+      "stage": "PROSPECTING",
+      "probability": 10,
+      "status": "ACTIVE",
+      "closeDate": "2026-11-14T21:08:13.543Z",
+      "companyId": "id_13",
+      "createdAt": "2026-09-15T21:08:13.543Z",
+      "assignedTo": "id_45"
+    },
+    "id_56": {
+      "id": "id_56",
+      "name": "Deal con contacto",
+      "value": 5000,
+      "currency": "USD",
+      "stage": "PROSPECTING",
+      "probability": 10,
+      "companyId": "id_10",
+      "createdAt": "2026-10-05T21:47:21.615Z",
+      "status": "ACTIVE",
+      "contactId": null,
+      "updatedAt": "2026-10-05T21:47:21.767Z",
+      "assignedTo": "id_1"
+    },
+    "id_57": {
+      "id": "id_57",
+      "name": "E2E contactId deal",
+      "value": 1000,
+      "currency": "USD",
+      "stage": "PROSPECTING",
+      "probability": 10,
+      "companyId": "id_10",
+      "contactId": null,
+      "createdAt": "2026-10-05T21:49:15.882Z",
+      "status": "ACTIVE",
+      "updatedAt": "2026-10-05T21:49:15.886Z",
+      "assignedTo": "id_2"
+    }
+  },
+  "invoices": {
+    "id_29": {
+      "id": "id_29",
+      "number": "F-2026-001",
+      "concept": "Renovación anual",
+      "date": "2026-09-01T21:08:13.543Z",
+      "dueDate": "2026-10-01T21:08:13.543Z",
+      "subtotal": 19834.71,
+      "tax": 4165.29,
+      "total": 24000,
+      "currency": "USD",
+      "status": "PAID",
+      "companyId": "id_13",
+      "createdAt": "2026-09-01T21:08:13.543Z",
+      "paidAt": "2026-10-06T21:08:13.543Z",
+      "customerName": "***** ******",
+      "customerAddress": "*****, *****",
+      "customerTaxId": "*****-*****-****",
+      "customerEmail": "*****@*****.***",
+      "taxRate": 15,
+      "sentAt": "2026-10-05T23:44:21.799Z",
+      "sentVia": "whatsapp",
+      "sentTo": "+54 9 11 5555-1111"
+    },
+    "id_30": {
+      "id": "id_30",
+      "number": "F-2026-002",
+      "concept": "Formación de equipo",
+      "date": "2026-09-23T21:08:13.543Z",
+      "dueDate": "2026-10-23T21:08:13.543Z",
+      "subtotal": 1983.47,
+      "tax": 416.53,
+      "total": 2400,
+      "currency": "USD",
+      "status": "PAID",
+      "companyId": "id_14",
+      "createdAt": "2026-09-23T21:08:13.543Z",
+      "paidAt": "2026-10-28T21:08:13.543Z"
+    },
+    "id_31": {
+      "id": "id_31",
+      "number": "F-2026-003",
+      "concept": "Soporte trimestral",
+      "date": "2026-09-30T21:08:13.543Z",
+      "dueDate": "2026-10-30T21:08:13.543Z",
+      "subtotal": 3966.94,
+      "tax": 833.06,
+      "total": 4800,
+      "currency": "USD",
+      "status": "SENT",
+      "companyId": "id_11",
+      "createdAt": "2026-09-30T21:08:13.543Z"
+    },
+    "id_32": {
+      "id": "id_32",
+      "number": "F-2026-004",
+      "concept": "Fase 1 implantación",
+      "date": "2026-10-03T21:08:13.543Z",
+      "dueDate": "2026-11-02T21:08:13.543Z",
+      "subtotal": 4958.68,
+      "tax": 1041.32,
+      "total": 6000,
+      "currency": "USD",
+      "status": "SENT",
+      "companyId": "id_10",
+      "createdAt": "2026-10-03T21:08:13.543Z"
+    },
+    "id_33": {
+      "id": "id_33",
+      "number": "F-2026-005",
+      "concept": "Licencias 2025",
+      "date": "2026-08-06T21:08:13.543Z",
+      "dueDate": "2026-09-05T21:08:13.543Z",
+      "subtotal": 2644.63,
+      "tax": 555.37,
+      "total": 3200,
+      "currency": "USD",
+      "status": "OVERDUE",
+      "companyId": "id_12",
+      "createdAt": "2026-08-06T21:08:13.543Z"
+    },
+    "id_34": {
+      "id": "id_34",
+      "number": "F-2026-006",
+      "concept": "Piloto inicial",
+      "date": "2026-10-04T21:08:13.543Z",
+      "dueDate": "2026-11-03T21:08:13.543Z",
+      "subtotal": 1487.6,
+      "tax": 312.4,
+      "total": 1800,
+      "currency": "USD",
+      "status": "DRAFT",
+      "companyId": "id_15",
+      "createdAt": "2026-10-04T21:08:13.543Z"
+    },
+    "id_65": {
+      "id": "id_65",
+      "number": "F-2026-101",
+      "date": "2026-10-05T22:26:35.992Z",
+      "dueDate": "2026-11-04T22:26:35.992Z",
+      "subtotal": 2000,
+      "tax": 420,
+      "total": 2420,
+      "currency": "USD",
+      "status": "DRAFT",
+      "companyId": "id_10",
+      "items": [
+        {
+          "description": "Licencias ERP",
+          "quantity": 10,
+          "unitPrice": 120,
+          "total": 1200
+        },
+        {
+          "description": "Soporte anual",
+          "quantity": 1,
+          "unitPrice": 800,
+          "total": 800
+        }
+      ],
+      "createdAt": "2026-10-05T22:26:35.992Z"
+    },
+    "id_66": {
+      "id": "id_66",
+      "number": "F-2026-101",
+      "date": "2026-10-05T22:31:04.451Z",
+      "dueDate": "2026-11-04T22:31:04.451Z",
+      "subtotal": 2000,
+      "tax": 420,
+      "total": 2420,
+      "currency": "USD",
+      "status": "DRAFT",
+      "companyId": "id_10",
+      "items": [
+        {
+          "description": "Licencias ERP",
+          "quantity": 10,
+          "unitPrice": 120,
+          "total": 1200
+        },
+        {
+          "description": "Soporte anual",
+          "quantity": 1,
+          "unitPrice": 800,
+          "total": 800
+        }
+      ],
+      "createdAt": "2026-10-05T22:31:04.451Z"
+    },
+    "id_67": {
+      "id": "id_67",
+      "number": "F-2026-102",
+      "date": "2026-10-05T22:31:04.524Z",
+      "dueDate": "2026-11-04T22:31:04.524Z",
+      "subtotal": 500,
+      "tax": 105,
+      "total": 605,
+      "currency": "USD",
+      "status": "DRAFT",
+      "companyId": "id_10",
+      "createdAt": "2026-10-05T22:31:04.524Z"
+    },
+    "id_70": {
+      "id": "id_70",
+      "number": "F-2026-103",
+      "date": "2026-10-05T22:34:31.430Z",
+      "dueDate": "2026-11-04T22:34:31.430Z",
+      "subtotal": 1000,
+      "tax": 210,
+      "total": 1210,
+      "currency": "USD",
+      "status": "DRAFT",
+      "companyId": "id_10",
+      "items": [
+        {
+          "description": "Servicio Cloud",
+          "quantity": 5,
+          "unitPrice": 200,
+          "total": 1000
+        }
+      ],
+      "createdAt": "2026-10-05T22:34:31.430Z"
+    },
+    "id_1": {
+      "id": "id_1",
+      "number": "VES-TEST",
+      "date": "2026-10-06T00:38:21.387Z",
+      "dueDate": "2026-11-05T00:38:21.387Z",
+      "subtotal": 2500,
+      "tax": 400,
+      "total": 2900,
+      "currency": "VES",
+      "status": "DRAFT",
+      "companyId": "id_11",
+      "items": [
+        {
+          "description": "Consultoría",
+          "quantity": 10,
+          "unitPrice": 250,
+          "total": 2500
+        }
+      ],
+      "createdAt": "2026-10-06T00:38:21.387Z",
+      "customerName": "***** ******",
+      "customerAddress": "*****, *****",
+      "customerTaxId": "*****-*****-****",
+      "customerEmail": "*****@*****.***",
+      "taxRate": 15
+    }
+  },
+  "activities": {
+    "id_35": {
+      "id": "id_35",
+      "type": "call",
+      "title": "Llamada de descubrimiento",
+      "description": "Reunión con el CTO. Interesados en SSO y API.",
+      "relatedTo": "note",
+      "relatedId": null,
+      "companyId": "id_11",
+      "dealId": "id_17",
+      "date": "2026-09-27T21:08:13.543Z",
+      "durationMinutes": 35,
+      "outcome": "completed"
+    },
+    "id_36": {
+      "id": "id_36",
+      "type": "meeting",
+      "title": "Demostración del producto",
+      "description": "Demo a dirección comercial. Preguntaron por el módulo de almacén.",
+      "relatedTo": "note",
+      "relatedId": null,
+      "companyId": "id_10",
+      "dealId": "id_18",
+      "date": "2026-09-29T21:08:13.543Z",
+      "durationMinutes": 60,
+      "outcome": "interested"
+    },
+    "id_37": {
+      "id": "id_37",
+      "type": "email",
+      "title": "Envío de propuesta",
+      "description": "Propuesta con dos opciones de precio y plan de migración.",
+      "relatedTo": "note",
+      "relatedId": null,
+      "companyId": "id_14",
+      "dealId": "id_21",
+      "date": "2026-10-01T21:08:13.543Z",
+      "durationMinutes": null,
+      "outcome": "completed"
+    },
+    "id_38": {
+      "id": "id_38",
+      "type": "call",
+      "title": "Seguimiento comercial",
+      "description": "Sin respuesta. Reprogramar para la semana que viene.",
+      "relatedTo": "note",
+      "relatedId": null,
+      "companyId": "id_15",
+      "dealId": "id_22",
+      "date": "2026-10-02T21:08:13.543Z",
+      "durationMinutes": 5,
+      "outcome": "no_answer"
+    },
+    "id_39": {
+      "id": "id_39",
+      "type": "note",
+      "title": "Presupuesto congelado",
+      "description": "Dirección financiera ha congelado toda inversión hasta 2027.",
+      "relatedTo": "note",
+      "relatedId": null,
+      "companyId": "id_12",
+      "dealId": "id_25",
+      "date": "2026-09-30T21:08:13.543Z",
+      "durationMinutes": null,
+      "outcome": "not_interested"
+    },
+    "id_40": {
+      "id": "id_40",
+      "type": "meeting",
+      "title": "Revisión de contrato",
+      "description": "Ajustada la cláusula de penalización. Listo para firma.",
+      "relatedTo": "note",
+      "relatedId": null,
+      "companyId": "id_13",
+      "dealId": "id_20",
+      "date": "2026-10-03T21:08:13.543Z",
+      "durationMinutes": 45,
+      "outcome": "completed"
+    },
+    "id_41": {
+      "id": "id_41",
+      "type": "call",
+      "title": "Primer contacto",
+      "description": "Cliente pequeño, presupuesto muy ajustado.",
+      "relatedTo": "note",
+      "relatedId": null,
+      "companyId": "id_16",
+      "dealId": "id_27",
+      "date": "2026-09-15T21:08:13.543Z",
+      "durationMinutes": 12,
+      "outcome": "completed"
+    },
+    "id_42": {
+      "id": "id_42",
+      "type": "email",
+      "title": "Recordatorio de pago",
+      "description": "Factura F-2026-005 vencida hace 30 días.",
+      "relatedTo": "note",
+      "relatedId": null,
+      "companyId": "id_12",
+      "date": "2026-10-04T21:08:13.543Z",
+      "durationMinutes": null,
+      "outcome": "pending"
+    },
+    "id_43": {
+      "id": "id_43",
+      "type": "call",
+      "title": "Cierre de formación",
+      "description": "Ambas sesiones validadas. Cliente satisfecho.",
+      "relatedTo": "note",
+      "relatedId": null,
+      "companyId": "id_14",
+      "dealId": "id_26",
+      "date": "2026-10-04T21:08:13.543Z",
+      "durationMinutes": 20,
+      "outcome": "completed"
+    },
+    "id_44": {
+      "id": "id_44",
+      "type": "meeting",
+      "title": "Presentación piloto",
+      "description": "Reprogramada por indisponibilidad del director de operaciones.",
+      "relatedTo": "note",
+      "relatedId": null,
+      "companyId": "id_15",
+      "dealId": "id_22",
+      "date": "2026-10-09T21:08:13.543Z",
+      "durationMinutes": 45,
+      "outcome": "rescheduled"
+    }
+  },
+  "contacts": {
+    "id_48": {
+      "id": "id_48",
+      "name": "Ana Gómez",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "Gerente comercial",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_10",
+      "createdAt": "2026-09-21T21:40:16.719Z"
+    },
+    "id_49": {
+      "id": "id_49",
+      "name": "Luis Fernández",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "CTO",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_11",
+      "createdAt": "2026-09-21T21:40:16.719Z"
+    },
+    "id_50": {
+      "id": "id_50",
+      "name": "Marta Ruiz",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "Administración",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_12",
+      "createdAt": "2026-09-21T21:40:16.719Z"
+    },
+    "id_51": {
+      "id": "id_51",
+      "name": "Jorge Serrano",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "Compras",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_13",
+      "createdAt": "2026-09-21T21:40:16.719Z"
+    },
+    "id_52": {
+      "id": "id_52",
+      "name": "Elena Torres",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "Compras",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_10",
+      "createdAt": "2026-09-21T21:40:16.719Z"
+    },
+    "id_53": {
+      "id": "id_53",
+      "name": "Pablo Navarro",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "CTO",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_11",
+      "createdAt": "2026-09-21T21:40:16.719Z"
+    },
+    "id_54": {
+      "id": "id_54",
+      "name": "Carmen Vidal",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "Dirección",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_12",
+      "createdAt": "2026-09-21T21:40:16.719Z"
+    },
+    "id_55": {
+      "id": "id_55",
+      "name": "Raúl Ortega",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "Logística",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_13",
+      "createdAt": "2026-09-21T21:40:16.719Z"
+    },
+    "id_68": {
+      "id": "id_68",
+      "name": "Empresa Test",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_10",
+      "createdAt": "2026-10-05T22:33:52.342Z"
+    },
+    "id_69": {
+      "id": "id_69",
+      "name": "Test Contact",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_10",
+      "createdAt": "2026-10-05T22:34:30.963Z"
+    },
+    "id_71": {
+      "id": "id_71",
+      "name": "Cliente Write-Through",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_11",
+      "createdAt": "2026-10-05T23:03:35.320Z"
+    },
+    "id_2": {
+      "id": "id_2",
+      "name": "Prueba Final",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_11",
+      "createdAt": "2026-10-05T23:08:07.006Z"
+    },
+    "id_1": {
+      "id": "id_1",
+      "name": "Prueba Envío",
+      "email": "*****@*****.***",
+      "phone": "*******",
+      "role": "",
+      "notes": "*****LIMPIADO*****",
+      "companyId": "id_11",
+      "createdAt": "2026-10-05T23:44:41.603Z"
+    }
+  },
+  "tasks": {
+    "id_58": {
+      "id": "id_58",
+      "title": "Llamar a Acme Retail para confirmar renovación",
+      "description": "",
+      "dueDate": "2026-10-04",
+      "priority": "medium",
+      "status": "pending",
+      "assignedTo": "id_4",
+      "companyId": "id_10",
+      "createdAt": "2026-10-02"
+    },
+    "id_59": {
+      "id": "id_59",
+      "title": "Enviar presupuesto a Nortech",
+      "description": "",
+      "dueDate": "2026-10-05",
+      "priority": "high",
+      "status": "pending",
+      "assignedTo": "id_4",
+      "companyId": "id_11",
+      "createdAt": "2026-10-02"
+    },
+    "id_60": {
+      "id": "id_60",
+      "title": "Revisar contrato Sanitas",
+      "description": "",
+      "dueDate": "2026-10-03",
+      "priority": "low",
+      "status": "done",
+      "assignedTo": "id_3",
+      "companyId": "id_12",
+      "createdAt": "2026-10-02",
+      "completedAt": "2026-10-05T21:51:25.364Z",
+      "updatedAt": "2026-10-05T21:51:25.364Z"
+    },
+    "id_61": {
+      "id": "id_61",
+      "title": "Agendar demo con DelSur",
+      "description": "",
+      "dueDate": "2026-10-08",
+      "priority": "medium",
+      "status": "pending",
+      "assignedTo": "id_4",
+      "companyId": "id_13",
+      "createdAt": "2026-10-02"
+    },
+    "id_62": {
+      "id": "id_62",
+      "title": "Seguimiento factura F-2026-005 vencida",
+      "description": "",
+      "dueDate": "2026-10-07",
+      "priority": "high",
+      "status": "pending",
+      "assignedTo": "id_4",
+      "companyId": "id_12",
+      "createdAt": "2026-10-02"
+    },
+    "id_63": {
+      "id": "id_63",
+      "title": "Preparar presentación logística",
+      "description": "",
+      "dueDate": null,
+      "priority": "low",
+      "status": "done",
+      "assignedTo": "id_4",
+      "companyId": null,
+      "createdAt": "2026-10-02"
+    }
+  },
+  "notifications": {
+    "notif_1791241415321_4esyb9onne9": {
+      "id": "notif_1791241415321_4esyb9onne9",
+      "type": "contact",
+      "title": "Nuevo contacto",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_71",
+      "read": false,
+      "createdAt": "2026-10-05T23:03:35.321Z"
+    },
+    "notif_1791241687007_rptk7yaqaui": {
+      "id": "notif_1791241687007_rptk7yaqaui",
+      "type": "contact",
+      "title": "Nuevo contacto",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_2",
+      "read": false,
+      "createdAt": "2026-10-05T23:08:07.007Z"
+    },
+    "notif_1791243881604_h28fto1t9v4": {
+      "id": "notif_1791243881604_h28fto1t9v4",
+      "type": "contact",
+      "title": "Nuevo contacto",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_1",
+      "read": false,
+      "createdAt": "2026-10-05T23:44:41.604Z"
+    },
+    "notif_1791247027506_4jdcw5tjgyq": {
+      "id": "notif_1791247027506_4jdcw5tjgyq",
+      "type": "invoice",
+      "title": "Nueva factura",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_1",
+      "read": false,
+      "createdAt": "2026-10-06T00:37:07.506Z"
+    },
+    "notif_1791247101388_4pztj29mcz": {
+      "id": "notif_1791247101388_4pztj29mcz",
+      "type": "invoice",
+      "title": "Nueva factura",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_1",
+      "read": false,
+      "createdAt": "2026-10-06T00:38:21.388Z"
+    },
+    "notif_1791324706150_61nnyxe0n52": {
+      "id": "notif_1791324706150_61nnyxe0n52",
+      "type": "task",
+      "title": "Nueva tarea",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_1",
+      "read": false,
+      "createdAt": "2026-10-06T22:11:46.150Z"
+    },
+    "notif_1791324706304_ar3tdqbzegm": {
+      "id": "notif_1791324706304_ar3tdqbzegm",
+      "type": "task",
+      "title": "Nueva tarea",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_2",
+      "read": false,
+      "createdAt": "2026-10-06T22:11:46.304Z"
+    },
+    "notif_1791324706603_865wgkac1": {
+      "id": "notif_1791324706603_865wgkac1",
+      "type": "task",
+      "title": "Nueva tarea",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_3",
+      "read": false,
+      "createdAt": "2026-10-06T22:11:46.603Z"
+    },
+    "notif_1791324706639_cx00qnd5k5h": {
+      "id": "notif_1791324706639_cx00qnd5k5h",
+      "type": "task",
+      "title": "Nueva tarea",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_4",
+      "read": false,
+      "createdAt": "2026-10-06T22:11:46.639Z"
+    },
+    "notif_1791324706799_9zx7c7ebqwj": {
+      "id": "notif_1791324706799_9zx7c7ebqwj",
+      "type": "task",
+      "title": "Nueva tarea",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_5",
+      "read": false,
+      "createdAt": "2026-10-06T22:11:46.799Z"
+    },
+    "notif_1791324707067_tcca8rt705q": {
+      "id": "notif_1791324707067_tcca8rt705q",
+      "type": "task",
+      "title": "Nueva tarea",
+      "message": "*****LIMPIADO*****",
+      "entityId": "id_6",
+      "read": false,
+      "createdAt": "2026-10-06T22:11:47.067Z"
+    }
+  },
+  "settings": {
+    "companyName": "Mi Empresa S.A.",
+    "currency": "VES",
+    "taxRate": 16,
+    "invoicePrefix": "F-",
+    "address": "Av. Corrientes 1234, CABA",
+    "phone": "+54 11 4321-8888",
+    "email": "facturacion@miempresa.com",
+    "taxId": "30-12345678-9",
+    "website": "https://miempresa.com",
+    "invoiceNotes": "Gracias por su compra.",
+    "publicUrl": "https://crm.miempresa.com",
+    "smtp": {
+      "host": "127.0.0.1",
+      "port": 2525,
+      "user": "*****@*****.***",
+      "password": "*****ENCRYPTED*****",
+      "secure": "none",
+      "from": "facturacion@miempresa.com",
+      "fromName": "Mi Empresa",
+      "replyTo": ""
+    },
+    "whatsapp": {
+      "mode": "evolution",
+      "url": "http://127.0.0.1:8080",
+      "instance": "crm",
+      "apiKey": "*****ENCRYPTED*****",
+      "phoneNumberId": "123456789",
+      "token": "*****ENCRYPTED*****"
+    },
+    "stages": [
+      {
+        "id": "PROSPECTING",
+        "label": "Prospección",
+        "probability": 10,
+        "color": "#64748b"
+      },
+      {
+        "id": "QUALIFIED",
+        "label": "Calificado",
+        "probability": 30,
+        "color": "#0284c7"
+      },
+      {
+        "id": "PROPOSAL",
+        "label": "Propuesta",
+        "probability": 50,
+        "color": "#2563eb"
+      },
+      {
+        "id": "NEGOTIATION",
+        "label": "Negociación",
+        "probability": 70,
+        "color": "#d97706"
+      },
+      {
+        "id": "WINNING",
+        "label": "Ganado",
+        "probability": 90,
+        "color": "#16a34a"
+      },
+      {
+        "id": "LOST",
+        "label": "Perdido",
+        "probability": 0,
+        "color": "#dc2626"
+      }
+    ]
+  },
+  "idCounter": 1
+}

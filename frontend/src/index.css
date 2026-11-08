@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+/* ============================================
+   CRM Pro — Design Tokens (Tailwind v4)
+   ============================================ */
+
+@theme {
+  /* Primary palette — professional blue */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+
+  /* Sidebar dark surface */
+  --color-sidebar: #0f172a;
+  --color-sidebar-hover: #1e293b;
+  --color-sidebar-active: #1d4ed8;
+
+  /* Semantic colors */
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --color-info: #0284c7;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  /* Radius */
+  --radius-card: 0.75rem;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.08);
+  --shadow-card-hover: 0 4px 12px -2px rgb(0 0 0 / 0.12);
+}
+
+/* ============================================
+   Base styles
+   ============================================ */
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f1f5f9;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.25;
+    color: #0f172a;
+  }
+
+  /* Accessible focus ring */
+  :focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Form controls: consistent baseline */
+  input,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 0.9375rem;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ============================================
+   Component utilities
+   ============================================ */
+
+@layer components {
+  /* Card surface */
+  .card {
+    @apply bg-white rounded-xl shadow-[var(--shadow-card)] border border-slate-200/70;
+  }
+
+  /* Primary button */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-medium rounded-lg
+      transition-all duration-150 cursor-pointer select-none
+      disabled:opacity-50 disabled:cursor-not-allowed
+      focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800
+      px-4 py-2.5 text-sm;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-slate-700 border border-slate-300 hover:bg-slate-50
+      active:bg-slate-100 px-4 py-2.5 text-sm;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700 active:bg-red-800
+      px-4 py-2.5 text-sm;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  /* Form field */
+  .field-label {
+    @apply block text-sm font-medium text-slate-700 mb-1.5;
+  }
+
+  .field-input {
+    @apply w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-white
+      text-slate-900 placeholder:text-slate-400
+      focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20
+      transition-colors duration-150;
+  }
+
+  .field-error {
+    @apply text-sm text-red-600 mt-1;
+  }
+
+  /* Status badge */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-warning {
+    @apply bg-amber-100 text-amber-800;
+  }
+
+  .badge-danger {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-info {
+    @apply bg-blue-100 text-blue-800;
+  }
+
+  .badge-neutral {
+    @apply bg-slate-100 text-slate-700;
+  }
+
+  /* Page title */
+  .page-title {
+    @apply text-2xl font-semibold text-slate-900;
+  }
+
+  /* Empty state */
+  .empty-state {
+    @apply flex flex-col items-center justify-center py-12 text-center;
+  }
+}

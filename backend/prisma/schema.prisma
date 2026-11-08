@@ -1,0 +1,279 @@
+/// CRM Schema — Professional CRM for Small Businesses
+///
+/// This schema defines the data model for a full-featured CRM including:
+/// - Authentication and user management
+/// - Company/contact management
+/// - Sales pipeline (deals/opportunities)
+/// - Invoice/billing
+/// - Activities/notes tracking
+/// - Integration points
+
+generator client {
+  provider = "@prisma/client"
+  // Relative to the schema file location
+}
+
+datasource PostgreSQL {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ✅ Auth & User Management
+model User {
+  id           UUID           @default(auto()) @map({ binary: false }) @id
+  name         String
+  email        String         @unique
+  password     String
+  role         Role           @default(VENDOR)
+  status       Status         @default(ACTIVE)
+  lastLogin    DateTime?     @default(now())
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  // Relations
+  companies    Company[]      @relation("CompanyUsers", mapsTo: "user")
+  createdCompanies Company[] @relation("CreatedBy", fields: [createdById], references: [id])
+  createdById  UUID?
+
+  // Token tracking
+  resetToken   String?
+  resetTokenExpiry DateTime?
+}
+
+// Enum for user roles
+enum Role {
+  ADMIN
+  VENDOR
+  VIEWER
+}
+
+// Enum for user status
+enum Status {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+// ✅ Company / Contact Management
+model Company {
+  id           UUID           @default(auto()) @map({ binary: false }) @id
+  name         String
+  description  String?
+  website      String?
+  industry     String?
+  phone        String
+  email        String
+  address      String?
+  status       Status         @default(ACTIVE)
+  avatarUrl    String?
+  logoUrl      String?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  // Relations
+  users        CompanyUser[]  @relation("CompanyUsers")
+  deals        Deal[]         @relation("CompanyDeals")
+  activities   Activity[]     @relation("CompanyActivities")
+  invoices     Invoice[]      @relation("CompanyInvoices")
+
+  // Indexes
+  @@ unique([email])
+  @@ index([name])
+  @@ index([status])
+}
+
+// Junction table for User-Company relationship
+model CompanyUser {
+  id          UUID   @default(auto()) @map({ binary: false }) @id
+  userId      UUID
+  companyId   UUID
+  role        UserRole   // Role within this specific company
+  joinedAt    DateTime @default(now())
+  status      Status     @default(ACTIVE)
+
+  // Relations
+  user        User      @relation(fields: [userId], references: [id])
+  company     Company   @relation(fields: [companyId], references: [id])
+
+  @@ unique([userId, companyId])
+  @@ index([companyId])
+  @@ index([userId])
+}
+
+// Enum for company user role
+enum UserRole {
+  OWNER
+  ADMIN
+  EDITOR
+  VIEWER
+}
+
+// ✅ Sales Pipeline / Deals
+model Deal {
+  id               UUID           @default(auto()) @map({ binary: false }) @id
+  name             String
+  description      String?
+  value            Decimal        // Deal value in currency
+  currency         String         @default("USD")
+  stage            DealStage      // Pipeline stage
+  probability      Int            // Percentage 0-100
+  closeDate        DateTime?     // Expected close date
+  actualCloseDate  DateTime?     // Actual close date
+  lostReason       String?        // Why deal was lost
+  status           DealStatus     // Active, Won, Lost
+  assignedTo       UUID?          // User ID
+  companyId        UUID?          // Associated company
+  notes            String?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  // Relations
+  user            User?         @relation("CompanyDeals", fields: [assignedTo], references: [id])
+  company         Company?      @relation("CompanyDeals")
+  activities      Activity[]    @relation("DealActivities")
+  invoices        Invoice[]     @relation("DealInvoices")
+
+  // Indexes
+  @@ index([stage])
+  @@ index([status])
+  @@ index([assignedTo])
+  @@ index([companyId])
+  @@ index([probability])
+}
+
+// Enum for deal stages
+enum DealStage {
+  PROSPECTING
+  QUALIFIED
+  PROPOSAL
+  NEGOTIATION
+  WINNING
+  LOST
+}
+
+// Enum for deal status
+enum DealStatus {
+  ACTIVE
+  WON
+  LOST
+}
+
+// ✅ Invoice / Billing
+model Invoice {
+  id               UUID           @default(auto()) @map({ binary: false }) @id
+  number           String         // Invoice number (e.g., INV-001)
+  date             DateTime
+  dueDate          DateTime
+  subtotal         Decimal
+  tax              Decimal        // Tax amount
+  total            Decimal
+  currency         String         @default("USD")
+  status           InvoiceStatus  // Draft, Sent, Paid, Overdue, Cancelled
+  paidAt           DateTime?
+  paymentMethod    String?
+  paymentReference String?
+  notes            String?
+  companyId        UUID           // Associated company
+  dealId           UUID?          // Linked deal
+  createdBy        UUID           // User who created
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  // Relations
+  company   Company   @relation("CompanyInvoices", fields: [companyId], references: [id])
+  deal      Deal?     @relation("DealInvoices", fields: [dealId], references: [id])
+  creator   User      @relation(fields: [createdBy], references: [id])
+
+  // Indexes
+  @@ index([status])
+  @@ index([companyId])
+  @@ index([dueDate])
+}
+
+// Enum for invoice status
+enum InvoiceStatus {
+  DRAFT
+  SENT
+  PAID
+  OVERDUE
+  CANCELLED
+}
+
+// ✅ Activities / Notes / Interactions
+model Activity {
+  id               UUID           @default(auto()) @map({ binary: false }) @id
+  type             ActivityType   // Call, Email, Meeting, Note, etc.
+  title            String
+  description      String?
+  relatedTo        RelationType   // Deal, Company, User, Invoice
+  relatedId        UUID?
+  userId           UUID           // User who performed the activity
+  companyId        UUID?          // Associated company
+  dealId           UUID?          // Associated deal
+  date             DateTime      @default(now())
+  durationMinutes  Int?           // For calls/meetings
+  outcome          String?        // Result of the interaction
+  createdAt        DateTime      @default(now())
+
+  // Relations
+  user       User      @relation(fields: [userId], references: [id])
+  company    Company?  @relation("CompanyActivities", fields: [companyId], references: [id])
+  deal       Deal?     @relation("DealActivities", fields: [dealId], references: [id])
+
+  // Indexes
+  @@ index([type])
+  @@ index([relatedTo])
+  @@ index([date])
+  @@ index([userId])
+}
+
+enum ActivityType {
+  CALL
+  EMAIL
+  MEETING
+  NOTE
+  MEETING_FOLLOWUP
+  TASK_COMPLETED
+  DEAL_WON
+  DEAL_LOST
+}
+
+enum RelationType {
+  DEAL
+  COMPANY
+  USER
+  INVOICE
+}
+
+// ✅ Settings / System Configuration
+model SystemSetting {
+  key      String   @unique
+  value    String
+  updatedAt DateTime @updatedAt
+
+  @@ unique([key])
+}
+
+// ✅ Audit Log (for tracking changes)
+model AuditLog {
+  id           UUID   @default(auto()) @map({ binary: false }) @id
+  action       String // e.g., "CREATE", "UPDATE", "DELETE"
+  entity       String // e.g., "User", "Company", "Deal", "Invoice"
+  entityId     UUID
+  userId       UUID   // Who performed the action
+  changes      JSON?  // What changed (before/after)
+  ipAddress    String?
+  userAgent    String?
+  createdAt    DateTime @default(now())
+
+  // Indexes
+  @@ index([entity])
+  @@ index([entityId])
+  @@ index([createdAt])
+}
+
+// Helper view/calculated fields (via Prisma)
+// These are not models but can be used in queries
+
+// Client initialization helper
+// $query = prisma.$transaction// ... (used in services)
