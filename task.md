@@ -1,4 +1,9 @@
+# Mission Brief
 
+## User Prompt (verbatim)
+Me gustaria crear un crm profesional para empresas pequenas, como podemos comenzar?
+
+## Context
 - Stack: React + Node.js
 - Funcionalidades: Todo en uno (contactos, ventas, facturación, reportes, automatización)
 - Usuarios: 5-20 (roles, permisos, concurrencia)

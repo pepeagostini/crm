@@ -27,8 +27,8 @@ node src/index.js
 ```
 
 ### Default Admin Credentials
-- **Email:** `pedroagostini@gmail.com`
-- **Password:** `/&aztq9hjbtaz`
+- **Email:** `demo@crm.com`
+- **Password:** `demo123`
 - **Role:** ADMIN
 
 ---
@@ -92,4 +92,4 @@ dist/
 
 - Generate strong JWT_SECRET: `node -e "console.log(require('crypto').randomBytes(48).toString('hex'))"`
 - SMTP/WhatsApp credentials are encrypted at rest
-- Admin account: `pedroagostini@gmail.com` / `/&aztq9hjbtaz`
+- Demo account: `demo@crm.com` / `demo123`
