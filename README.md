@@ -62,8 +62,8 @@ npm run dev
 
 ### 4. Access the app
 Open `http://localhost:5173` and login with:
-- **Email:** ``
-- **Password:** ``
+- **Email:** `demo@crm.com`
+- **Password:** `demo123`
 
 ---
 
@@ -189,7 +189,7 @@ The API uses real HS256 JWT + bcrypt password hashing:
 - Passwords are bcrypt-hashed
 - Login is rate-limited: 20 failed attempts per 15 min per IP
 - `JWT_SECRET` must be set in `backend/.env` (min 32 chars)
-- Admin seed user: `pedroagostini@gmail.com` / `/&aztq9hjbtaz`
+- Demo account: `demo@crm.com` / `demo123`
 
 ---
 
