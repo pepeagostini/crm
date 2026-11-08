@@ -62,8 +62,8 @@ npm run dev
 
 ### 4. Access the app
 Open `http://localhost:5173` and login with:
-- **Email:** `pedroagostini@gmail.com`
-- **Password:** `/&aztq9hjbtaz`
+- **Email:** ``
+- **Password:** ``
 
 ---
 
